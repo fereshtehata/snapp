@@ -89,7 +89,7 @@ const Home = () => {
       case MODES.MODE_PRICE:
         return (
           <div>
-            <p className="text-center">
+            <p className="text-center text-black">
               قیمت : <span className="font-extrabold">{price.toLocaleString()} تومان</span>
             </p>
             <div>
@@ -104,7 +104,7 @@ const Home = () => {
       case MODES.MODE_LOADING:
         return (
           <div>
-            <p>در حال پیدا کردن راننده ....</p>
+            <p className="text-black">در حال پیدا کردن راننده ....</p>
           </div>
         );
       case MODES.MODE_DRIVER:
@@ -112,8 +112,8 @@ const Home = () => {
           <div className="flex w-full  gap-2">
             <img className="rounded-full w-20 h-20" src={driver.avatar} />
             <div className="flex flex-col ml-auto  gap-2">
-              <span>{driver.name}</span>
-              <span>{driver.car}</span>
+              <span className="text-black">{driver.name}</span>
+              <span className="text-black">{driver.car}</span>
             </div>
             <button
               className="h-max bg-red-500 hover:bg-red-700 mx-2  mt-4 text-white font-bold py-2 px-4 rounded" onClick={handleReset}>لغو سفر</button>

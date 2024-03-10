@@ -82,19 +82,21 @@ const Home = () => {
   function renderFooter() {
     switch (mode) {
       case MODES.MODE_ORIGIN:
-        return <button onClick={handleSelectOrigin}>انتخاب مبدا</button>;
+        return <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onClick={handleSelectOrigin}>انتخاب مبدا</button>;
       case MODES.MODE_DEST:
-        return <button onClick={handleSelectDest}>انتخاب مقصد</button>;
+        return <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onClick={handleSelectDest}>انتخاب مقصد</button>;
 
       case MODES.MODE_PRICE:
         return (
           <div>
-            <p>
-              قیمت : <span className="font-bold">{price.toLocaleString()} تومان</span>
+            <p className="text-center">
+              قیمت : <span className="font-extrabold">{price.toLocaleString()} تومان</span>
             </p>
             <div>
-              <button onClick={handleLoadDrivers}>تایید</button>
-              <button onClick={handleReset}>تغییر مبدا و مقصد</button>
+              <button className="bg-green-500 hover:bg-green-700 mx-2  mt-4 text-white font-bold py-2 px-4 rounded" onClick={handleLoadDrivers}>تایید</button>
+              <button
+                className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                onClick={handleReset}>تغییر مبدا و مقصد</button>
             </div>
           </div>
         );
@@ -113,7 +115,8 @@ const Home = () => {
               <span>{driver.name}</span>
               <span>{driver.car}</span>
             </div>
-            <button className="h-max" onClick={handleReset}>لغو سفر</button>
+            <button
+              className="h-max bg-red-500 hover:bg-red-700 mx-2  mt-4 text-white font-bold py-2 px-4 rounded" onClick={handleReset}>لغو سفر</button>
           </div>
         );
 

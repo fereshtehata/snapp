@@ -132,7 +132,7 @@ const Home = () => {
           //  ref={ref=>ref.getCenter}
           ref={mapRef}
           className="w-screen h-full"
-          center={[29.40,52.58 ]}
+          center={[35.76,51.43 ]}
           zoom={13}
           scrollWheelZoom={false}
         >
